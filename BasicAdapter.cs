@@ -48,7 +48,7 @@ namespace CarListExercise
             view.FindViewById<TextView>(Resource.Id.textView1).Text = item.Manufacturer;
             view.FindViewById<TextView>(Resource.Id.textView2).Text = item.Model;
             view.FindViewById<TextView>(Resource.Id.textView3).Text = item.Year;
-            //view.FindViewById<TextView>(Resource.Id.textView4).Text = item.kW;
+            view.FindViewById<TextView>(Resource.Id.textView4).Text = item.kW;
 
             return view;
         }
