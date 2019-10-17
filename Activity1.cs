@@ -12,15 +12,15 @@ using Android.Widget;
 
 namespace CarListExercise
 {
-        [Activity(Label = "FirstActivity")]
-        public class FirstActivity : ListActivity
+    [Activity(Label = "Activity1")]
+    public class Activity1 : ListActivity
+    {
+        List<CarInfo> _items;
+        protected override void OnCreate(Bundle savedInstanceState)
         {
-            List<CarInfo> _items;
-            protected override void OnCreate(Bundle savedInstanceState)
-            {
-                base.OnCreate(savedInstanceState);
+            base.OnCreate(savedInstanceState);
 
-                _items = new List<CarInfo>()
+            _items = new List<CarInfo>()
             {
                 new CarInfo(){Manufacturer = "Alfa Romeo",Model = "GT Distinctive",Year = "2007" ,kW = "110kW"},
                 new CarInfo(){Manufacturer = "Alfa Romeo",Model = "GTV",Year = "2003" ,kW = "110kW" },
@@ -34,10 +34,8 @@ namespace CarListExercise
                 new CarInfo(){Manufacturer = "Volvo",Model = "C70",Year = "1999" ,kW = "142kW" }
             };
 
-                var listview = FindViewById<ListView>(Resource.Id.listView1);
-                listview.Adapter = new BasicAdapter(this, _items);
-            }
-
+            //var listview = FindViewById<ListView>(Resource.Id.listView1);
+            //listview.Adapter = new BasicAdapter(this, _items);
         }
-    
+    }
 }

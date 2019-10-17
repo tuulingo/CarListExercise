@@ -30,8 +30,11 @@ namespace CarListExercise
 
         private void ToListActivityButton_Click(object sender, EventArgs e)
         {
-            var intent = new Intent(this, typeof(FirstActivity));
+            var intent = new Intent(this, typeof(Activity1));
             StartActivity(intent);
+
+            //StartActivity(new Intent(this, typeof(FirstActivity)));
         }
+
     }
 }
